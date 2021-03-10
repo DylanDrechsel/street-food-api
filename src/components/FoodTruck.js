@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Maps from './Maps'
 
 const FoodTruck = () => {
     const [foodTruck, setFoodTruck] = useState([])
+	const [location, setLocation] = useState([])
 
     useEffect(() => {
         fetch('https://data.sfgov.org/resource/6a9r-agq8.json')
@@ -36,30 +38,31 @@ const FoodTruck = () => {
     let list = foodTruck.map((truck, index) => {
 					return (
 						<div key={truck.objectid}>
-							
-							<Link to={'/foodtruck/' + truck.applicant} onClick={() => {
-								const location = [truck.latitude, truck.longitude];
-								console.log(location)
-
-								setFoodTruck(location)
-								
-							}}>
+							<Link
+								/* to={'/foodtruck/' + truck.applicant} */
+								onClick={() => {
+									setLocation([truck.latitude, truck.longitude]);
+								}}
+							>
 								<h2>{truck.applicant}</h2>
 							</Link>
 
 							<p>{truck.fooditems}</p>
 							<a href={truck.schedule}>Schedule</a>
-
 						</div>
 					);} 
                 )
+				console.log(location)
     
     return (
-        <div className="foodtruck">
-			{/* <h1>Please select the food truck you want to visit</h1> */}
-            {list}
-        </div>
-    );
+			<div className='foodtruck'>
+
+				{/* <h1>Please select the food truck you want to visit</h1> */}
+				{list}
+				<Maps location={location}/>
+
+			</div>
+		);
 };
 
 export default FoodTruck;

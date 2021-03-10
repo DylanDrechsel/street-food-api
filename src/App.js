@@ -36,18 +36,18 @@ function App() {
 
         <Route path='/about' component={About} />
 
-        <Route path='/food-truck' component={FoodTruck} />
+        {/* <Route path='/food-truck' component={FoodTruck} /> */}
 
-        <Route path='/foodtruck/:applicant' render={() => 
+        {/* <Route path='/foodtruck/:applicant' render={() => 
           
           <div id='map'>
 
-            {/* <FoodTruck /> */}
+            <FoodTruck />
             <Maps />
 
           </div>
 
-        } />
+        } /> */}
         
       </main>
 

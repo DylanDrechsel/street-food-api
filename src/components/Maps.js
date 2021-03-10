@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ReactMapGL, {Marker} from "react-map-gl"
 
-const Maps = () => {
+const Maps = ({ location }) => {
     const [viewport, setViewport] = useState({
 			latitude: 37.73944545286909,
 			longitude: -122.39301498669842,
@@ -9,6 +9,26 @@ const Maps = () => {
 			height: '100vh',
 			zoom: 10,
 		});
+
+		console.log(location)
+		console.log(viewport)
+
+	
+	useEffect(() => {
+		if (location[0] !== undefined || 0) {
+			setViewport({
+				latitude: parseFloat(location[0]),
+				longitude: parseFloat(location[1]),
+				width: '100vw',
+				height: '100vh',
+				zoom: 18,
+			});
+	}
+	}, [location])
+
+	console.log(viewport);
+
+
 
     return (
 			<div className='Map' id='map'>
