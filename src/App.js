@@ -1,23 +1,56 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { Route, Link } from 'react-router-dom'
+import Home from './components/Home'
+import About from './components/About';
+import FoodTruck from './components/FoodTruck'
+import Maps from './components/Maps'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <link
+				href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css'
+				rel='stylesheet'
+			/>
+      
+      <nav>
+
+        <Link to='/'><h1>Home</h1></Link>
+
+        <Link to='/about'><h1>About</h1></Link>
+
+        <Link to='/food-truck'><h1>Food Trucks</h1></Link>
+
+      </nav>
+
+      <sidebar>
+      </sidebar>
+
+      <main>
+
+        {/* <FoodTruck /> */}
+
+        <Route path='/' exact component={FoodTruck} />
+
+        <Route path='/about' component={About} />
+
+        <Route path='/food-truck' component={FoodTruck} />
+
+        <Route path='/foodtruck/:applicant' render={() => 
+          
+          <div id='map'>
+
+            {/* <FoodTruck /> */}
+            <Maps />
+
+          </div>
+
+        } />
+        
+      </main>
+
     </div>
   );
 }
