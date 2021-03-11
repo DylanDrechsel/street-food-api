@@ -1,25 +1,31 @@
 import React, { useState, useEffect } from 'react';
-import ReactMapGL, {Marker} from "react-map-gl"
+import ReactMapGL, {Marker, Popup} from "react-map-gl"
+import CityPin from '/mnt/c/Users/Drech/Documents/SEI/projects/street-food-api/src/components/TruckPin.js';
 
-const Maps = ({ location }) => {
-    const [viewport, setViewport] = useState({
+const Maps = ({ location, foodTruck, information }) => {
+    const [showPopup, togglePopup] = useState(true);
+	const [viewport, setViewport] = useState({
 			latitude: 37.73944545286909,
 			longitude: -122.39301498669842,
-			width: '100vw',
+			width: '70vw',
 			height: '100vh',
 			zoom: 10,
 		});
 
-		console.log(location)
-		console.log(viewport)
+		// console.log(parseFloat(information.longitude));
+		// console.log(location)
+		// console.log(viewport)
 
-	
+		// console.log(foodTruck);
+		console.log(foodTruck.latitude);
+		// console.log(information)
+
 	useEffect(() => {
 		if (location[0] !== undefined || 0) {
 			setViewport({
 				latitude: parseFloat(location[0]),
 				longitude: parseFloat(location[1]),
-				width: '100vw',
+				width: '70vw',
 				height: '100vh',
 				zoom: 18,
 			});
@@ -29,27 +35,42 @@ const Maps = ({ location }) => {
 	console.log(viewport);
 
 
+		let list = foodTruck.map((truck) => {
+			return (
+				<Marker
+					key={truck.objectid}
+					longitude={parseFloat(truck.longitude)}
+					latitude={parseFloat(truck.latitude)}>
+					{/* <div style={{ color: 'red' }}>TRUCK</div> */}
+					<CityPin size={14}></CityPin>
+
+				</Marker>
+			);
+		});
+	
+
+	console.log(list)
+
 
     return (
-			<div className='Map' id='map'>
+			<div className='Map'>
 				<ReactMapGL
-
 					{...viewport}
-
 					mapboxApiAccessToken='pk.eyJ1IjoiZHlsYW5kcmVjaHNlbCIsImEiOiJja20zbXU4MXAxajhiMm9xbXVrMW01dGNrIn0.Ql2dpSmE-S6Q0FgbY0iqjg'
-
 					mapStyle='mapbox://styles/dylandrechsel/ckm3pch0w220218qt4l0ud8yb'
-
 					onViewportChange={(viewport) => {
 						setViewport(viewport);
-
 					}}>
 
+					<Marker
+						longitude={parseFloat(information.longitude)}
+						latitude={parseFloat(information.latitude)}>
+						<div style={{ color: 'red' }}>TRUCK</div>
+						<CityPin size={20}></CityPin>
+					</Marker>
 
-
-                    </ReactMapGL>
-
-				{/* <h1>Hello from maps</h1> */}
+					{list}
+				</ReactMapGL>
 			</div>
 		);
 };

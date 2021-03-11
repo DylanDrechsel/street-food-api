@@ -22,6 +22,8 @@ nav {
 
 .foodtruck {
   color: white;
-  width: 30%;
-  /* height: 100px !important; */
+  height: 100vh;
+  width:30%;
+  overflow:hidden;
+  overflow-y:scroll;
 }

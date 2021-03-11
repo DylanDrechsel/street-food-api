@@ -30,9 +30,9 @@ function App() {
 
       <main>
 
-        {/* <FoodTruck /> */}
+        <FoodTruck />
 
-        <Route path='/' exact component={FoodTruck} />
+        {/* <Route path='/' exact component={FoodTruck} /> */}
 
         <Route path='/about' component={About} />
 
