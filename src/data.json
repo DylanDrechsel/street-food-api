@@ -1,0 +1,46 @@
+[
+	{
+		"id": "pic1",
+		"webImage": {
+			"guid": "aa08df9c-0af9-4195-b31b-f578fbe0a4c9",
+			"offsetPercentageX": 0,
+			"offsetPercentageY": 1,
+			"width": 2500,
+			"height": 2034,
+			"url": "https://cdn2.lamag.com/wp-content/uploads/sites/6/2017/03/foodtruck.jpg"
+		}
+	},
+    {
+		"id": "pic2",
+		"webImage": {
+			"guid": "aa08df9c-0af9-4195-b31b-f578fbe0a4c9",
+			"offsetPercentageX": 0,
+			"offsetPercentageY": 1,
+			"width": 2500,
+			"height": 2034,
+			"url": "https://www.qsrmagazine.com/sites/default/files/styles/story_page/public/franchising/Flickr-Todd-Lappin-Curry-Up-Now-food-truck-r.jpg?itok=vUbFtPyU"
+		}
+	},
+    {
+		"id": "pic3",
+		"webImage": {
+			"guid": "aa08df9c-0af9-4195-b31b-f578fbe0a4c9",
+			"offsetPercentageX": 0,
+			"offsetPercentageY": 1,
+			"width": 2500,
+			"height": 2034,
+			"url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Chinese-food_truck_in_Noum%C3%A9a%2C_New_Caledonia%2C_2011.jpg"
+		}
+	},
+    {
+		"id": "pic4",
+		"webImage": {
+			"guid": "aa08df9c-0af9-4195-b31b-f578fbe0a4c9",
+			"offsetPercentageX": 0,
+			"offsetPercentageY": 1,
+			"width": 2500,
+			"height": 2034,
+			"url": "https://cdn.vox-cdn.com/thumbor/quN_vZUwDPocvn37Wmp4fN-5QYI=/0x74:2039x1603/1200x800/filters:focal(0x74:2039x1603)/cdn.vox-cdn.com/uploads/chorus_image/image/34385803/8896812208_6b2e99f4aa_o.0.jpg"
+		}
+	}
+]

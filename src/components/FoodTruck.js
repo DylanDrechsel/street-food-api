@@ -46,7 +46,7 @@ const FoodTruck = () => {
 					return (
 						<div key={truck.objectid}>
 							<Link
-								// to={'/test/' + truck}
+								// to={'/' + truck.objectid}
 								onClick={() => {
 									setLocation([truck.latitude, truck.longitude]);
 									const newInformation = {
