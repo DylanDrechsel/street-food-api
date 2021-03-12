@@ -33,7 +33,7 @@ const FoodTruck = () => {
 								(food) => 
 									(food.fooditems) !== undefined
 							)
-							console.log(foodItem)
+							// console.log(foodItem)
 
 							setFoodTruck(foodItem);
 					}})
@@ -46,7 +46,7 @@ const FoodTruck = () => {
 					return (
 						<div key={truck.objectid}>
 							<Link
-								/* to={'/foodtruck/' + truck.applicant} */
+								// to={'/test/' + truck}
 								onClick={() => {
 									setLocation([truck.latitude, truck.longitude]);
 									const newInformation = {
@@ -63,7 +63,7 @@ const FoodTruck = () => {
 						</div>
 					);} 
                 )
-				console.log(information)
+				// console.log(information)
     
     return (
 			<div>

@@ -5,6 +5,7 @@ import Home from './components/Home'
 import About from './components/About';
 import FoodTruck from './components/FoodTruck'
 import Maps from './components/Maps'
+import Test from './components/Test'
 
 function App() {
   return (
@@ -38,12 +39,13 @@ function App() {
 
         {/* <Route path='/food-truck' component={FoodTruck} /> */}
 
-        {/* <Route path='/foodtruck/:applicant' render={() => 
+        {/* <Route path='/test/:applicant' render={() => 
           
           <div id='map'>
 
             <FoodTruck />
             <Maps />
+            <Test />
 
           </div>
 
