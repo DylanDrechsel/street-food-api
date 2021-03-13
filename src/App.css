@@ -17,7 +17,7 @@
 .map {
   border-radius: 10%;
   padding: 0px 0px 0px 0px;
-  margin: auto !important;
+  /* margin: auto !important; */
 }
 
 .Nav {

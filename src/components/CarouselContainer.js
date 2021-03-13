@@ -8,11 +8,11 @@ const CarouselContainer = () => {
 			<Carousel fade style={{ minHeight: '10vh' }}>
 				{data.map((item) => {
 					return (
-						<Carousel.Item key={item.id} style={{ maxHeight: '20vh' }}>
+						<Carousel.Item key={item.id} style={{ maxHeight: '30vh' }}>
 							<img
 								className='d-block w-100'
 								style={{
-									height: '20vh',
+									height: '23vh',
 									width: '100%',
 									objectFit: 'cover',
 									overflow: 'hidden',
