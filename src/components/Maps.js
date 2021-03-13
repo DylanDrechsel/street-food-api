@@ -7,9 +7,9 @@ const Maps = ({ location, foodTruck, information }) => {
 	const [viewport, setViewport] = useState({
 			latitude: 37.73944545286909,
 			longitude: -122.39301498669842,
-			width: '70vw',
-			height: '100vh',
-			zoom: 12,
+			width: '73.3vw',
+			height: '75vh',
+			zoom: 11
 		});
 
 		// console.log(parseFloat(information.longitude));
@@ -25,8 +25,8 @@ const Maps = ({ location, foodTruck, information }) => {
 			setViewport({
 				latitude: parseFloat(location[0]),
 				longitude: parseFloat(location[1]),
-				width: '70vw',
-				height: '100vh',
+				width: '73.3vw',
+				height: '75vh',
 				zoom: 18,
 			});
 	}

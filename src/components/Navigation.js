@@ -5,7 +5,12 @@ import { Link } from 'react-router-dom';
 
 const Navigation = () => {
 	return (
-		<Navbar collapseOnSelect variant='light' expand='md'>
+		<Navbar
+            className='Nav'
+			style={{ maxHeight: '3vh',/*  background: '#FF715B' */ }}
+			collapseOnSelect
+			variant='light'
+			expand='md'>
 			<Navbar.Brand style={{ color: 'white' }} as={Link} to='/'>
 				FoodTrucks
 			</Navbar.Brand>

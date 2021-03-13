@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Maps from './Maps'
+import {Container, Row, Col} from 'react-bootstrap';
 // import ReactMapGL, { Marker } from 'react-map-gl';
 
 const FoodTruck = () => {
@@ -66,15 +67,23 @@ const FoodTruck = () => {
 				// console.log(information)
     
     return (
-			<div>
-				<div className='foodtruck'>{list}</div>
+			// <Container>
+				<Row>
+				
+				<Col xs={3}>
+					<div className='foodtruck'>{list}</div>
+				</Col>
 
+				<Col xs={9}>
 				<Maps
 					location={location}
 					foodTruck={foodTruck} 
 					information={information}
 				/>
-			</div>
+				</Col>
+
+				</Row>
+			// </Container>
 		);
 };
 

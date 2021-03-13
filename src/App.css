@@ -10,12 +10,27 @@
   float: right;
 }
 
+.Nav {
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0), #ff715b);
+  
+}
+
+.container {
+  margin-left: 0 !important;
+  margin-right:0 !important;
+}
+
+/* .row {
+  width: 100% !important;
+} */
+
 .foodtruck {
   color: white;
-  height: 100vh;
-  width:30%;
+  height: 75vh;
+  width:115%;
   overflow:hidden;
   overflow-y:scroll;
+  margin-left: 0 !important;
 }
 
   .marker {
