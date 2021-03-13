@@ -60,7 +60,7 @@ const FoodTruck = () => {
 							</Link>
 
 							<p>{truck.fooditems}</p>
-							<a href={truck.schedule}>Schedule</a>
+							{/* <a href={truck.schedule}>Schedule</a> */}
 						</div>
 					);} 
                 )
