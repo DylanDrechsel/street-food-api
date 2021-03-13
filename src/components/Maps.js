@@ -55,8 +55,8 @@ const Maps = ({ location, foodTruck, information }) => {
 
 
     return (
-			<div className='Map'>
-				<ReactMapGL
+			<div className='mapDiv'>
+				<ReactMapGL className='map'
 					{...viewport}
 					mapboxApiAccessToken='pk.eyJ1IjoiZHlsYW5kcmVjaHNlbCIsImEiOiJja20zbXU4MXAxajhiMm9xbXVrMW01dGNrIn0.Ql2dpSmE-S6Q0FgbY0iqjg'
 					mapStyle='mapbox://styles/dylandrechsel/ckm3pch0w220218qt4l0ud8yb'

@@ -70,17 +70,17 @@ const FoodTruck = () => {
 			// <Container>
 				<Row>
 				
-				<Col xs={3}>
-					<div className='foodtruck'>{list}</div>
-				</Col>
+					<Col xs={3}>
+						<div className='scrollbar' className='foodtruck'>{list}</div>
+					</Col>
 
-				<Col xs={9}>
-				<Maps
-					location={location}
-					foodTruck={foodTruck} 
-					information={information}
-				/>
-				</Col>
+					<Col xs={9}>
+						<Maps
+							location={location}
+							foodTruck={foodTruck} 
+							information={information}
+						/>
+					</Col>
 
 				</Row>
 			// </Container>
