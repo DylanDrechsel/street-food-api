@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import data from '/mnt/c/Users/Drech/Documents/SEI/projects/street-food-api/src/data.json';
+import data from '../data.json';
 
 const CarouselContainer = () => {
 	return (

@@ -27,7 +27,7 @@ const Maps = ({ location, foodTruck, information }) => {
 				longitude: parseFloat(location[1]),
 				width: '73.3vw',
 				height: '75vh',
-				zoom: 18,
+				zoom: 18
 			});
 	}
 	}, [location])
