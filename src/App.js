@@ -1,58 +1,34 @@
 import React from 'react';
 import './App.css';
-import { Route, Link } from 'react-router-dom'
-import Home from './components/Home'
-import About from './components/About';
+import { Route } from 'react-router-dom'
+import About from './components/About'
 import FoodTruck from './components/FoodTruck'
-import Maps from './components/Maps'
+import CarouselContainer from './components/CarouselContainer'
+import Navigation from './components/Navigation';
+
 
 function App() {
   return (
-    <div className="App">
-
-      <link
+		<div className='App'>
+			<link
 				href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css'
 				rel='stylesheet'
 			/>
-      
-      <nav>
 
-        <Link to='/'><h1>Home</h1></Link>
+			<Navigation />
+			<CarouselContainer />
 
-        <Link to='/about'><h1>About</h1></Link>
+			<main>
 
-        <Link to='/food-truck'><h1>Food Trucks</h1></Link>
+				<Route path='/' exact component={FoodTruck} />
 
-      </nav>
+				<Route path='/about' component={About} />
 
-      <sidebar>
-      </sidebar>
+				<Route path='/contact' component={About} />
 
-      <main>
-
-        {/* <FoodTruck /> */}
-
-        <Route path='/' exact component={FoodTruck} />
-
-        <Route path='/about' component={About} />
-
-        <Route path='/food-truck' component={FoodTruck} />
-
-        <Route path='/foodtruck/:applicant' render={() => 
-          
-          <div id='map'>
-
-            {/* <FoodTruck /> */}
-            <Maps />
-
-          </div>
-
-        } />
-        
-      </main>
-
-    </div>
-  );
+			</main>
+		</div>
+	);
 }
 
 export default App;

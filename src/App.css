@@ -1,26 +1,187 @@
 .App {
   background: black;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100vh
 }
-
-/* .Map {
-  color: white;
-} */
 
 .About {
   color: white;
 }
 
-nav {
-  background-color: red;
-  opacity: 0.3;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
+.mapDiv {
+  float: right;
+  padding: 0px 25px 0px 0px;
 }
+
+.map {
+  border-radius: 6%;
+  padding: 0px 0px 0px 0px;
+  /* margin: auto !important; */
+}
+
+.Nav {
+  background-image: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  /* background: rgba(0, 0, 0, 0.493); */
+  /* background-image: linear-gradient(to bottom right, #ff715b00, #ffffea00); */
+  z-index: 999;
+}
+
+.mainCarousel {
+  padding: 0px 0px 15px 0px;
+  margin-top: -30px;
+  /* position: absolute; */
+  /* top: 0; */
+  /* width: 100vw; */
+}
+
+.search {
+  /* color: rgb(0, 0, 0); */ 
+  /* border-radius: 10%; */
+  background-color: #ffffffe5;
+  border: 1px solid rgb(255, 255, 255);
+  width: 98% !important;
+  /* margin-left: 0 !important; */
+  padding: 0px 29% 0px 29%;
+}
+
+.searchDiv {
+  padding: 0px 0px 5px 5px;
+  /* border: 1px solid grey; */
+}
+
+  /* .search {
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 25px;
+    width: 100%;
+    padding: 2px 23px 2px 30px;
+    outline: 0;
+    background-color: #f5f5f5;
+  } */
+
+
+/* .container {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+} */
+
+/* .row {
+  width: 100% !important;
+} */
 
 .foodtruck {
   color: white;
-  width: 30%;
+  height: 71.5vh;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  margin-left: 0 !important;
+  padding: 0px 50px 0px 5px;
+}
+
+/* .scrollbar {
+  color: red;
+  float: left;
+} */
+
+.marker {
+  /* Set the marker size here */
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
+  /* Set the marker color here */
+  background: #aa3300;
+
+  display: inline-block;
+  border-bottom-right-radius: 0;
+  position: relative;
+  transform: rotate(45deg);
+  transform: rotateZ(90deg);
+
+  /* optional fanciness */
+  border: 1px solid #881100;
+}
+
+/* inner circle (optional if you don't need the central dot) */
+.marker::before {
+  content: "";
+  background: white;
+  width: 50%;
+  height: 50%;
+  border-radius: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 1px solid #881100;
+  box-shadow: 0.1rem 0.1rem 0.2rem 0.1rem rgba(0, 0, 0, 0.1);
+}
+
+/* sets the shadow below the marker */
+.marker::after {
+  content: "";
+  background: rgba(128, 128, 128, 0.5);
+  width: 75%;
+  height: 75%;
+  border-radius: 100%;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  transform: translate(-50%, -50%) rotate(45deg) scaleX(0.5);
+}
+
+.smallMarker {
+  /* Set the marker size here */
+  width: .5%;
+  height: 1%;
+  border-radius: 100%;
+  /* Set the marker color here */
+  background: #00000079;
+
+  display: inline-block;
+  /* border-bottom-right-radius: 0; */
+  position: relative;
+  transform: rotate(45deg);
+
+  /* optional fanciness */
+  border: 1px solid #000000;
+}
+
+/* sets shadow around the scrollbar */
+.foodtruck::-webkit-scrollbar-track {
+  /* width: 100vh; */
+  /* height: 1vh; */
+  /* -webkit-box-shadow: inset 0px 6px 10px 6px rgb(255, 255, 255); */
+  /* -webkit-box-shadow: inset 0px 6px 10px 6px rgba(0, 0, 0, 0.637); */
+  /* box-shadow: 0px 0px 6px 4px rgba(85, 85, 85, 0.603);z */
+  /* background-color: #00000083; */
+  /* padding: 0px 0px 15px 0px; */
+  border-radius: 40% !important;
+}
+
+.foodtruck::-webkit-scrollbar {
+  /* border-radius: 10000000000 px !important; */
+  /* float: left; */
+  /* height: 1vh; */
+  width: 10px;
+  background-color: #504e4e3b;
+  border-radius: 40% !important;
+  /* overflow: auto; */
+  /* visibility: hidden; */
+  display: none;
+  /* padding: 0px 0px 15px 0px; */
+}
+
+.foodtruck::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 2px solid #555555;
+  cursor: pointer;
+  transition: opacity 0.25s linear;
+}
+
+.foodtruck:hover::-webkit-scrollbar {
+  display: inline-block;
 }
