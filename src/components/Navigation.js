@@ -30,6 +30,15 @@ const Navigation = () => {
 						<b>Search</b>
 					</Nav.Link>
 				</Nav>
+				
+				<Nav className='ml-auto'>
+					<Nav.Link
+						className='github'
+						style={{ color: 'white' }}
+						href='https://github.com/DylanDrechsel'>
+						<b>GitHub</b>
+					</Nav.Link>
+				</Nav>
 			</Navbar.Collapse>
 		</Navbar>
 	);

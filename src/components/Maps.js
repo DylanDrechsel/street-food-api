@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ReactMapGL, {Marker, Popup} from "react-map-gl"
-import TruckPin from '/mnt/c/Users/Drech/Documents/SEI/projects/street-food-api/src/components/TruckPin.js';
+// import TruckPin from '/mnt/c/Users/Drech/Documents/SEI/projects/street-food-api/src/components/TruckPin.js';
 
 const Maps = ({ location, foodTruck, information }) => {
     // const [showPopup, togglePopup] = useState(true);
