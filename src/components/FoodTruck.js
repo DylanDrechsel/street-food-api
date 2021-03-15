@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Maps from './Maps'
-import {Container, Row, Col} from 'react-bootstrap';
-// import ReactMapGL, { Marker } from 'react-map-gl';
+import { Row, Col } from 'react-bootstrap';
 import Search from './Search'
 
 const FoodTruck = () => {
@@ -32,14 +31,12 @@ const FoodTruck = () => {
 							Number(location.latitude) !== 0 ||
 							Number(location.longitude) !== 0
 					);
-					/* console.log(locations) */
 							
 					// getting rid of all keys that dont have a food description
 					let foodItem = locations.filter(
 						(food) => 
 							(food.fooditems) !== undefined
 					)
-							// console.log(foodItem)
 					setFoodTruck(foodItem);
 			}})
 			.catch((err) => {
@@ -49,50 +46,66 @@ const FoodTruck = () => {
 
 				
 	useEffect(() => {
-		const list = foodTruck.map((truck) => {
-						return (
-							<div key={truck.objectid}>
-								<Link
-									// to={'/' + truck.objectid}
-									onClick={() => {
-										setLocation([truck.latitude, truck.longitude]);
-										const newInformation = {
-											latitude: truck.latitude,
-											longitude: truck.longitude,
-										};
-										setInformation(newInformation);
-									}}>
-									<h2>{truck.applicant}</h2>
-								</Link>
-								<p>{truck.fooditems}</p>
-								{/* <a href={truck.schedule}>Schedule</a> */}
-							</div>
-						);} 
-					)
-				setList(list)
+		if (inputValue.inputValue !== '') {
+			const filteredList = filteredNames.map((truck) => {
+				return (
+					<div key={truck.objectid}>
+						<Link
+							// to={'/' + truck.objectid}
+							onClick={() => {
+								setLocation([truck.latitude, truck.longitude]);
+								const newInformation = {
+									latitude: truck.latitude,
+									longitude: truck.longitude,
+								};
+								setInformation(newInformation);
+							}}>
+							<h2>{truck.applicant}</h2>
+						</Link>
+						<p>{truck.fooditems}</p>
+						{/* <a href={truck.schedule}>Schedule</a> */}
+					</div>
+				);
+			});
+			setList(filteredList)
+		} else {
+			const list = filteredNames.map((truck) => {
+				return (
+					<div key={truck.objectid}>
+						<Link
+							// to={'/' + truck.objectid}
+							onClick={() => {
+								setLocation([truck.latitude, truck.longitude]);
+								const newInformation = {
+									latitude: truck.latitude,
+									longitude: truck.longitude,
+								};
+								setInformation(newInformation);
+							}}>
+							<h2>{truck.applicant}</h2>
+						</Link>
+						<p>{truck.fooditems}</p>
+						{/* <a href={truck.schedule}>Schedule</a> */}
+					</div>
+				);
+			});
+			setList(list)
+
+		}
 						
-	}, [foodTruck]) // add foodTruck because list would render before fetch was completed
+	}, [foodTruck, inputValue]) // add foodTruck because list would render before fetch was completed
 
-	useEffect(() => {
-		console.log('Test from inputValue effect')
-	}, [inputValue])
-
-
-	// console.log(list)
+	let filteredNames = foodTruck.filter((truck) => {
+		return truck.applicant.toLowerCase().indexOf(inputValue.inputValue.toLowerCase()) !== -1;
+	})
 
 	const foodTruckOnChange = (event) => {
-		// console.log("hi from onChange", event.target.value)
 		setInputValue({
 			inputValue: event.target.value
 		})
 	}
 
-				console.log(inputValue.inputValue)
-
-
-    
     return (
-			// <Container>
 				<Row>
 				
 					<Col xs={3}>
@@ -109,7 +122,6 @@ const FoodTruck = () => {
 					</Col>
 
 				</Row>
-			// </Container>
 		);
 };
 

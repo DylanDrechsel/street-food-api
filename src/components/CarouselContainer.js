@@ -18,11 +18,7 @@ const CarouselContainer = () => {
 									overflow: 'hidden',
 								}}
 								src={item.webImage.url}
-								// alt={item.title}
 							/>
-							{/* <Carousel.Caption> */}
-							{/* <p>{item.longTitle}</p> */}
-							{/* </Carousel.Caption> */}
 						</Carousel.Item>
 					);
 				})}

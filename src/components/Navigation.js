@@ -7,12 +7,12 @@ const Navigation = () => {
 	return (
 		<Navbar
 			className='Nav'
-			style={{ maxHeight: '3vh' /*  background: '#FF715B' */ }}
+			style={{ maxHeight: '3vh' }}
 			collapseOnSelect
 			variant='light'
 			expand='md'>
 			<Navbar.Brand
-				style={{ color: 'white' /* , fontweight: 'bold'  */ }}
+				style={{ color: 'white' }}
 				as={Link}
 				to='/'>
 				<b>FoodTrucks</b>
@@ -25,9 +25,6 @@ const Navigation = () => {
 					</Nav.Link>
 					<Nav.Link style={{ color: 'white' }} as={Link} to='/contact'>
 						<b>Contact</b>
-					</Nav.Link>
-					<Nav.Link style={{ color: 'white' }} as={Link} to='/search'>
-						<b>Search</b>
 					</Nav.Link>
 				</Nav>
 				
