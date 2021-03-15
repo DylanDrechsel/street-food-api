@@ -43,7 +43,6 @@ const FoodTruck = () => {
 				console.log(err);
 			});
 		}, [])
-
 				
 	useEffect(() => {
 		if (inputValue.inputValue !== '') {
@@ -51,7 +50,6 @@ const FoodTruck = () => {
 				return (
 					<div key={truck.objectid}>
 						<Link
-							// to={'/' + truck.objectid}
 							onClick={() => {
 								setLocation([truck.latitude, truck.longitude]);
 								const newInformation = {
@@ -63,7 +61,6 @@ const FoodTruck = () => {
 							<h2>{truck.applicant}</h2>
 						</Link>
 						<p>{truck.fooditems}</p>
-						{/* <a href={truck.schedule}>Schedule</a> */}
 					</div>
 				);
 			});
@@ -73,7 +70,6 @@ const FoodTruck = () => {
 				return (
 					<div key={truck.objectid}>
 						<Link
-							// to={'/' + truck.objectid}
 							onClick={() => {
 								setLocation([truck.latitude, truck.longitude]);
 								const newInformation = {
@@ -85,7 +81,6 @@ const FoodTruck = () => {
 							<h2>{truck.applicant}</h2>
 						</Link>
 						<p>{truck.fooditems}</p>
-						{/* <a href={truck.schedule}>Schedule</a> */}
 					</div>
 				);
 			});
