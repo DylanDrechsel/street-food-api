@@ -19,7 +19,7 @@ function App() {
 			<CarouselContainer />
 
 			<main>
-				<Route path='/street-food-api/' exact component={FoodTruck} />
+				<Route path='/' exact component={FoodTruck} />
 
 				<Route path='/about' component={About} />
 
