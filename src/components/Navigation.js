@@ -14,7 +14,7 @@ const Navigation = () => {
 			<Navbar.Brand
 				style={{ color: 'white' }}
 				as={Link}
-				to='/'>
+				to='/street-food-api'>
 				<b>FoodTrucks</b>
 			</Navbar.Brand>
 			<Navbar.Toggle aria-controls='basic-navbar-nav' />
