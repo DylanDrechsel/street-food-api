@@ -3,7 +3,7 @@
 
 ## Getting Started:
 
-You can test the application yourself by going to (...)
+You can test the application yourself by going to https://dylandrechsel.github.io/street-food-api/
 
 **_If you would rather change things around and test it for yourself**
 
