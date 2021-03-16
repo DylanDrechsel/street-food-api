@@ -21,7 +21,11 @@ function App() {
 			<main>
 				<Route path='/' exact component={FoodTruck} />
 
-				<Route path='/street-food-api' exact component={FoodTruck} />
+				<Route
+					path='https://dylandrechsel.github.io/street-food-api/'
+					exact
+					component={FoodTruck}
+				/>
 
 				<Route path='/about' component={About} />
 
