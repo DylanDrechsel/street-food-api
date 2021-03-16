@@ -49,7 +49,7 @@ const FoodTruck = () => {
 			const filteredList = filteredNames.map((truck) => {
 				return (
 					<div key={truck.objectid}>
-						<Link
+						<div
 							onClick={() => {
 								setLocation([truck.latitude, truck.longitude]);
 								const newInformation = {
@@ -59,7 +59,7 @@ const FoodTruck = () => {
 								setInformation(newInformation);
 							}}>
 							<h2>{truck.applicant}</h2>
-						</Link>
+						</div>
 						<p>{truck.fooditems}</p>
 					</div>
 				);
