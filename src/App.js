@@ -21,6 +21,8 @@ function App() {
 			<main>
 				<Route path='/' exact component={FoodTruck} />
 
+				<Route path='/street-food-api' exact component={FoodTruck} />
+
 				<Route path='/about' component={About} />
 
 				<Route path='/contact' component={About} />
