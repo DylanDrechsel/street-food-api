@@ -27,3 +27,7 @@ You can test the application yourself by going to https://dylandrechsel.github.i
 - Bootstrap
 - CSS3
 - netlify
+
+## Contribution Guidelines:
+
+If you liked to make any contributions please submit a pull request with the changes made
