@@ -26,7 +26,6 @@ You can test the application yourself by going to https://dylandrechsel.github.i
 - React Router
 - Bootstrap
 - CSS3
-- netlify
 
 ## Contribution Guidelines:
 
